@@ -1,7 +1,8 @@
 ﻿'use strict';
 
 var Snake = require('../../src/js/snake.js'),
-	SnakePart = require('../../src/js/snake.part.js');
+	SnakePart = require('../../src/js/snake.part.js'),
+	Food = require('../../src/js/food.js');
 
 describe('Snake', function () {
 	describe('interface has a', function () {
@@ -31,7 +32,7 @@ describe('Snake', function () {
 		expect(snake.length).toEqual(0);
 	});
 	
-	describe('config argument correctly affects a', function () {
+	describe('config argument correctly affects the', function () {
 		var config = {
 			direction: 'down',
 			length: 5
