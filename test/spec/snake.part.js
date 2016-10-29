@@ -102,6 +102,42 @@ describe('Snake Part', function () {
 		});
 	});
 
+	describe('can move witn a negative step', function () {
+		var part;
+		beforeEach(function () {
+			part = new SnakePart({ x: 10, y: 10 });
+			spyOn(part, 'move').and.callThrough();
+		});
+		it('left', function () {
+			var steps = -3;
+			part.direction = 'left';
+			part.move(steps);
+			expect(part.x).toEqual(13);
+			expect(part.y).toEqual(10);
+		});
+		it('right', function () {
+			var steps = -4;
+			part.direction = 'right';
+			part.move(steps);
+			expect(part.x).toEqual(6);
+			expect(part.y).toEqual(10);
+		});
+		it('up', function () {
+			var steps = -15;
+			part.direction = 'up';
+			part.move(steps);
+			expect(part.x).toEqual(10);
+			expect(part.y).toEqual(25);
+		});
+		it('down', function () {
+			var steps = -3;
+			part.direction = 'down';
+			part.move(steps);
+			expect(part.x).toEqual(10);
+			expect(part.y).toEqual(7);
+		});
+	});
+
 	describe('don\'t move, if no steps', function () {
 		var part;
 		beforeEach(function () {

@@ -56,9 +56,11 @@ module.exports = function (grunt) {
 		},
 		targethtml: {
 			build: {
-				files: {
-					'build/index.html': SRC_DIR + '/index.html'
-				}
+				files: (function() {
+					var config = {};
+					config[BUILD_DIR + '/index.html'] = SRC_DIR + '/index.html'
+					return config;
+				}())
 			}
 		},
 		systemjs: {
