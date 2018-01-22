@@ -1,8 +1,6 @@
-﻿'use strict';
-
-var Snake = require('../../src/js/snake.js'),
-	SnakePart = require('../../src/js/snake.part.js'),
-	Food = require('../../src/js/food.js');
+﻿import Snake from '../../src/classes/snake.js';
+import SnakePart from '../../src/classes/snake-part.js';
+import Food from '../../src/classes/food.js'
 
 describe('Snake', function () {
 	describe('interface has a', function () {

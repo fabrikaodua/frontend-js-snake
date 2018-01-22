@@ -1,7 +1,5 @@
-﻿'use strict';
-
-var Food = require('../../src/js/food.js'),
-	BaseElement = require('../../src/js/base.element.js');
+﻿import Food from '../../src/classes/food.js';
+import BaseElement from '../../src/classes/base-element.js';
 
 describe('Food', function () {
 	describe('interface has a', function () {

@@ -1,27 +1,22 @@
 {
 	"name": "frontend-js-snake",
+	"private": true,
 	"description": "Develop a snake modules",
-	"author": "Fabrika",
-	"version": "1.0.1",
+	"author": "Constantine Genchevsky",
+	"version": "2.0.0",
 	"main": "src/index.js",
-	"dependencies": {
-		"systemjs": "~0.19.5",
-		"bower-traceur": "git://github.com/jmcriffey/bower-traceur"
-	},
+	"license": "GPL-3.0",
+	"dependencies": {},
 	"devDependencies": {
-		"grunt": "1.0.1",
-		"systemjs-builder": "~0.15.10",
-		"grunt-targethtml": "~0.2.6",
-		"grunt-contrib-jshint": "1.1.0",
-		"grunt-contrib-watch": "1.0.0",
-		"grunt-contrib-jasmine": "1.1.0",
-		"grunt-contrib-clean": "1.1.0",
-		"grunt-contrib-concat": "1.0.1",
-		"grunt-contrib-copy": "1.0.0",
-		"grunt-jsdoc": "1.1.0"
+		"neutrino": "^8.0.18",
+		"neutrino-preset-svelte": "^5.0.0",
+		"@neutrinojs/jest": "^8.0.18",
+		"@neutrinojs/eslint": "^8.0.18"
 	},
 	"scripts": {
-		"test": "grunt test && grunt code",
-		"build": "grunt build"
+		"test": "neutrino test --verbose --watchAll",
+		"build": "neutrino build",
+		"start": "neutrino start",
+		"lint": "neutrino lint"
 	}
 }
