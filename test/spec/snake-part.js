@@ -8,59 +8,59 @@ describe('Snake Part', function () {
 		it('property "direction"', function () {
 			expect(part.direction).toBeDefined();
 		});
-		
+
 		it('method "move()"', function () {
 			expect(part.move).toBeDefined();
 		});
 	});
-			
+
 	describe('recieves a', function () {
 		var part = new SnakePart();
-		it('property "x" from a Base Element', function(){
+		it('property "x" from a Base Element', function () {
 			expect(part.x).toBeDefined();
 		});
-		it('property "y" from a Base BaseElement', function(){
+		it('property "y" from a Base BaseElement', function () {
 			expect(part.y).toBeDefined();
 		});
-		it('property "isVisible" from a Base BaseElement', function(){
-			expect(part.isVisible).toBeDefined();
+		it('property "visible" from a Base BaseElement', function () {
+			expect(part.visible).toBeDefined();
 		});
 	});
-	
+
 	it('is instance of a Base Element', function () {
 		var part = new SnakePart();
-			expect(part instanceof BaseElement).toBe(true);
+		expect(part instanceof BaseElement).toBe(true);
 	});
-	
-	it('property "isVisible" is `true` by default', function () {
+
+	it('property "visible" is `true` by default', function () {
 		var part = new SnakePart();
-			expect(part.isVisible).toBe(true);
+		expect(part.visible).toBe(true);
 	});
-	
+
 	it('has {x:0, y:0} coordinates by default', function () {
 		var part = new SnakePart();
-			expect(part.x).toBe(0);
-			expect(part.y).toBe(0);
+		expect(part.x).toBe(0);
+		expect(part.y).toBe(0);
 	});
-	
+
 	describe('config argument correctly affects a', function () {
 		var config = {
 			x: 774,
 			y: 88,
-			isVisible: false,
+			visible: false,
 			direction: 'down'
 		}
 		var part = new SnakePart(config);
-		it('property "x"', function(){
+		it('property "x"', function () {
 			expect(part.x).toEqual(config.x);
 		});
-		it('property "y"', function(){
+		it('property "y"', function () {
 			expect(part.y).toEqual(config.y);
 		});
-		it('property "isVisible"', function(){
-			expect(part.isVisible).toEqual(config.isVisible);
+		it('property "visible"', function () {
+			expect(part.visible).toEqual(config.visible);
 		});
-		it('property "direction"', function(){
+		it('property "direction"', function () {
 			expect(part.direction).toEqual(config.direction);
 		});
 	});
