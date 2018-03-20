@@ -8,10 +8,10 @@
 	"license": "GPL-3.0",
 	"dependencies": {},
 	"devDependencies": {
-		"neutrino": "^8.0.18",
-		"neutrino-preset-svelte": "^5.0.0",
-		"@neutrinojs/jest": "^8.0.18",
-		"@neutrinojs/eslint": "^8.0.18"
+		"neutrino": "8.1.2",
+		"neutrino-preset-svelte": "5.0.0",
+		"@neutrinojs/jest": "8.1.2",
+		"@neutrinojs/eslint": "8.1.2"
 	},
 	"scripts": {
 		"test": "neutrino test --verbose --watchAll",
